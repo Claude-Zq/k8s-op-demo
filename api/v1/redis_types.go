@@ -29,7 +29,15 @@ type RedisSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Redis. Edit redis_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Name string `json:"name,omitempty"`
+
+	// validation: https://book.kubebuilder.io/reference/markers/crd-validation.html
+
+	//+kubebuilder:validation:Minimum:=2000
+	//+kubebuilder:validation:Maximum:=2380
+	Port int `json:"port,omitempty"`
+
+	Replicas int `json:"replicas,omitempty"`
 }
 
 // RedisStatus defines the observed state of Redis
