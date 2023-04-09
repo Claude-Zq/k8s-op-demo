@@ -1,6 +1,9 @@
 apiVersion: myapp.qing.com/v1
 kind: Redis
 metadata:
-  name: redis-sample
+  name: qing
+  namespace: default
 spec:
-  # TODO(user): Add fields here
+  name: qing
+  port: 2378
+  replicas: 3
