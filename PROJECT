@@ -1,0 +1,6 @@
+domain: qing.com
+layout:
+- go.kubebuilder.io/v3
+projectName: k8s-op-demo
+repo: k8s-op-demo
+version: "3"
