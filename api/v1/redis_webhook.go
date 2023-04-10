@@ -56,7 +56,7 @@ func (r *Redis) ValidateCreate() error {
 	redislog.Info("validate create", "name", r.Name)
 
 	// 增加：如果是资源名字为 qing 则不允许创建
-	if r.Namespace == "qing" {
+	if r.Name == "qing" {
 		return fmt.Errorf("error name.")
 	}
 
